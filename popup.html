@@ -5,18 +5,54 @@
     <style>
       body {
         font-family: sans-serif;
-        padding: 10px;
-        min-width: 180px;
+        padding: 16px;
+        min-width: 200px;
+        background: #1e1e2e;
+        color: #cdd6f4;
+        margin: 0;
       }
-      button {
-        width: 100%;
-        padding: 8px;
+
+      h3 {
+        margin: 0 0 12px 0;
         font-size: 14px;
+        color: #cba6f7;
+        text-align: center;
+        letter-spacing: 0.5px;
+      }
+
+      #toggle {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.2s, color 0.2s;
+      }
+
+      #toggle.on {
+        background: #a6e3a1;
+        color: #1e1e2e;
+      }
+
+      #toggle.off {
+        background: #f38ba8;
+        color: #1e1e2e;
+      }
+
+      #status {
+        margin-top: 10px;
+        font-size: 12px;
+        text-align: center;
+        color: #a6adc8;
       }
     </style>
   </head>
   <body>
+    <h3>Native Code Focus Bypass</h3>
     <button id="toggle">Loading...</button>
+    <div id="status"></div>
     <script src="popup.js"></script>
   </body>
 </html>
